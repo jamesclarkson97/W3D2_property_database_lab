@@ -44,7 +44,19 @@ class Property
         db.close
     end
 
+    def find()
+        db = PG.connect({dbname:'property_database', host:'localhost'})
+        sql = "SELECT * FROM properties WHERE id = $1"
+        values = [@id]
+        db.prepare('find', sql)
+        db.exec_prepared('find', values)
+        db.close()
+    end
 
+    # def find_by_address()
+    #     db = PG.connect({dbname:'property_database', host:'localhost'})
+    #     sql = "SELECT address FROM properties WHERE address = '32 Right Street'"
+    #     db
 
 
 

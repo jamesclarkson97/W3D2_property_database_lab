@@ -17,5 +17,7 @@ property2 = Property.new({'address' => '32 Right Street',
 property2.save()
 property1.delete()
 
+property2.find()
+
 binding.pry
 nil
