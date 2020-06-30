@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS property_tracker;
+DROP TABLE IF EXISTS properties;
 
-CREATE TABLE property_tracker(
+CREATE TABLE properties (
     id SERIAL PRIMARY KEY,
     address VARCHAR(255),
     value INT,
